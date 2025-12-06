@@ -292,7 +292,7 @@ const NoteEditor = ({ note, onUpdate, onClose, onDelete, onMoveNote, folders, is
                           {SHAPES.slice(0, 12).map((s,i) => <button key={i} onClick={() => onUpdate(note.id, {shape: s})} className={`h-8 bg-current opacity-20 ${s} ${note.shape === s ? '!opacity-50 ring-2 ring-indigo-500' : ''}`} />)}
                       </div>
                    </div>
-                   <div className="mb-4"
+                   <div className="mb-4">
                       <h4 className="text-xs font-bold opacity-50 mb-2 uppercase">Icon</h4>
                       <div className="grid grid-cols-6 gap-1">{Object.keys(ICONS).map(k => { const I=ICONS[k]; return <button key={k} onClick={() => onUpdate(note.id, {icon: k})} className={`p-2 hover:bg-black/5 rounded ${note.icon === k ? 'text-indigo-600 bg-indigo-50' : ''}`}><I size={16}/></button> })}</div>
                    </div>
